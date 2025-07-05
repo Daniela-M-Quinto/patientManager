@@ -1,0 +1,156 @@
+/* Background with animated gradient */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #ffb6b9, #fcdff0, #b5ead7, #c7ceea);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Keyframe animation for gradient */
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Main title with shadow and animation */
+h1 {
+    color: #fff;
+    text-shadow: 2px 4px 12px #00000055;
+    margin-top: 40px;
+    margin-bottom: 24px;
+    letter-spacing: 2px;
+    animation: fadeInDown 1s;
+}
+/* Fade-in animation for the title */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+/* Glassmorphism style form */
+form {
+    background: rgba(255,255,255,0.35);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+    backdrop-filter: blur(8px);
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 420px;
+    margin-bottom: 30px;
+    animation: fadeIn 1.2s;
+}
+
+/* Fade-in animation for the form */
+@keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+/* Form label styles */
+label {
+    align-self: flex-start;
+    margin-top: 12px;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 1px;
+}
+/* Input fields styles */
+input {
+    margin-bottom: 12px;
+    padding: 10px 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.7);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    font-size: 1rem;
+    transition: box-shadow 0.2s;
+}
+/* Input focus styles */
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #b5ead7;
+}
+
+
+/* Button styles with effect */
+button {
+    margin: 10px 6px;
+    padding: 12px 20px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #007bff 60%, #00c6ff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.3s, transform 0.2s;
+}
+/* Button hover effect */
+button:hover {
+    background: linear-gradient(90deg, #0056b3 60%, #00aaff 100%);
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* Inventory list container with glassmorphism effect */
+#inventory-list {
+    margin-top: 24px;
+    padding: 24px;
+    background: rgba(255,255,255,0.45);
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+    backdrop-filter: blur(6px);
+    width: 100%;
+    max-width: 650px;
+    animation: fadeIn 1.5s;
+}
+/* Inventory list heading */
+#inventory-list h2 {
+    color: #007bff;
+    margin-bottom: 18px;
+    text-shadow: 1px 2px 8px #b5ead7aa;
+}
+
+/* List styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+/* List item styles */
+li {
+    padding: 16px 18px;
+    background: rgba(245,245,245,0.85);
+    border: 1px solid #b5ead7;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.05rem;
+    transition: background 0.2s, transform 0.2s;
+    animation: fadeInUp 0.7s;
+}
+/* Fade-in animation for list items */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* List item hover effect */
+li:hover {
+    background: #e0f7fa;
+    transform: scale(1.02);
+}

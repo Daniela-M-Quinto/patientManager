@@ -1,124 +1,41 @@
+<!-- CRUD de Inventario de Logística Portuaria -->
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PatientManager is a simple web app for managing patient records using JSON Server, Fetch API or Axios, and Bootstrap. Built for learning RESTful API consumption.">
-  <meta name="keywords" content="patient manager, json-server, fetch, axios, rest api, bootstrap, frontend practice, Riwi">
-  <meta name="sitedomain" content="https://github.com/Riwi-io-Medellin/patientManager">
-  <meta name="organization" content="Riwi">
-  <meta name="author" content="Javier Combita Tellez">
-  <meta name="designer" content="Javier Combita Tellez">
-  <meta name="copyright" content="© 2025 Riwi. All rights reserved">
-  <meta name="theme-color" content="#ffffff">
-  <meta name="robots" content="index,follow">
-  <meta name="googlebot" content="index,follow">
-  <meta name="revisit-after" content="15days">
-  <link rel="stylesheet" href="./src/scss/styles.scss">
-  <title>Patients</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario Logística Portuaria</title>
+    <link rel="stylesheet" href="./src/css/styles.css">
 </head>
-
 <body>
-  <header>
-    <h1 class="title">Administrador pacientes</h1>
-  </header>
+    <h1>Container logistics</h1> <!-- Main title of the page -->
+        <!-- The form to add, view, delete, and update container data -->
+    <form id="container-form">
+        <label for="containerID">ID Contenedor:</label>
+        <input type="number" id="containerID" placeholder="Ingrese el ID del contenedor">
 
-  <main class="container row bg-white rounded">
-    <section class="col-12 col-md-6">
-      <div class="p-3">
-        <h4>Datos del paciente</h4>
+        <label for="cargoType">Tipo de Carga:</label>
+        <input type="text" id="cargoType" placeholder="Ingrese el tipo de carga">
 
-        <form id="form" class="row g-3 needs-validation p-2" novalidate>
-          <div class="mb-3">
-            <label for="name_pet" class="form-label">Nombre de la mascota</label>
-            <input type="text" class="form-control" id="name_pet" placeholder="Escribe el nombre de tu mascota"
-              required />
-            <div class="invalid-feedback">Este campo es obligatorio</div>
-          </div>
+        <label for="originPort">Puerto de Origen:</label>
+        <input type="text" id="originPort" placeholder="Ingrese el puerto de origen">
 
-          <div class="mb-3">
-            <label for="name_pet" class="form-label">Nombre del propietario</label>
-            <input type="text" class="form-control" id="name_person" placeholder="Escribe tu nombre" required />
-            <div class="invalid-feedback">Este campo es obligatorio</div>
-          </div>
+        <label for="destinationPort">Puerto de Destino:</label>
+        <input type="text" id="destinationPort" placeholder="Ingrese el puerto de destino">
 
-          <div class="mb-3">
-            <label for="name_pet" class="form-label">Telefono del propietario</label>
-            <input type="tel" class="form-control" id="phone_person" placeholder="Escribe tu numero telefonico"
-              maxlength="10" required />
-            <div class="invalid-feedback">Este campo es obligatorio</div>
-          </div>
-
-          <div class="mb-3">
-            <label for="name_pet" class="form-label">Fecha de la cita</label>
-            <input type="date" class="form-control" id="date_cite" placeholder="Escribe el nombre de tu mascota"
-              required />
-            <div class="invalid-feedback">Este campo es obligatorio</div>
-          </div>
-
-          <div class="mb-3">
-            <label for="name_pet" class="form-label">Hora de la cita</label>
-            <input type="time" class="form-control" id="time_cite" placeholder="Escribe el nombre de tu mascota"
-              required />
-            <div class="invalid-feedback">Este campo es obligatorio</div>
-          </div>
-
-          <div class="mb-3">
-            <label for="description" class="form-label">Sintomas</label>
-            <textarea class="form-control" id="description" rows="3" required></textarea>
-          </div>
-
-          <button class="btn btn-success" type="submit" id="btnSave">
-            Guardar
-          </button>
-        </form>
-      </div>
-    </section>
-    <section class="col-12 col-md-6 p-3">
-      <h4>Administrar citas</h4>
-      <div class="container-cites d-flex flex-wrap gap-3">
-        <article class="card card_cite">
-          <div class="card-body">
-            <h5 class="card-title fs-3 fw-bold">Maria lupe ortiz</h5>
-            <p class="card-text">
-
-            <div class="d-flex gap-2">
-              <span class="fw-bold">Propietario:</span>
-              <span>javier combita</span>
-            </div>
-
-            <div class="d-flex gap-2">
-              <span class="fw-bold">Telefono:</span>
-              <span>3136954017</span>
-            </div>
-
-            <div class="d-flex gap-2">
-              <span class="fw-bold">Fecha:</span>
-              <span>hoy</span>
-            </div>
-
-            <div class="d-flex gap-2">
-              <span class="fw-bold">Hora:</span>
-              <span>13:14</span>
-            </div>
-
-            <div class="d-flex gap-2">
-              <span class="fw-bold">Sintomas:</span>
-              <span>fiebre leve</span>
-            </div>
-
-            <div class="d-flex mt-3 gap-2">
-              <button class="btn btn-primary edit">Editar</button>
-              <button class="btn btn-danger delete">Eliminar</button>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <script type="module" src="./src/js/main.js"></script>
+        <label for="status">Estado:</label>
+        <input type="text" id="status" placeholder="Ingrese el estado (En tránsito, En puerto, Entregado)">
+            <!-- Buttons for various actions -->
+        <button type="button" id="addContainerButton">Add Container</button>
+        <button type="button" id="viewContainersButton">See Containers</button>
+        <button type="button" id="deleteContainerButton">Delete Container</button>
+        <button type="button" id="updateContainerButton">Update Container</button>
+        <!-- Important: Search button for container lookup -->
+        <button type="button" id="searchContainerButton">Search Container</button>
+    </form>
+    <!-- Div to display the inventory list (containers) -->
+    <div id="inventory-list"></div>
+    <!-- External JavaScript file -->
+    <script type="module" src="./src/js/main.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,52 @@
+{
+  "containers": [
+    {
+      "id": "1",
+      "containerID": 101,
+      "cargo": "Electrónica",
+      "origin": "Puerto de Shanghai",
+      "destination": "Puerto de Valencia",
+      "status": "En tránsito"
+    },
+    {
+      "id": "2",
+      "containerID": 102,
+      "cargo": "Textiles",
+      "origin": "Puerto de Santos",
+      "destination": "Puerto de Barcelona",
+      "status": "En puerto"
+    },
+    {
+      "id": "3",
+      "containerID": 103,
+      "cargo": "Alimentos",
+      "origin": "Puerto de Rotterdam",
+      "destination": "Puerto de Buenos Aires",
+      "status": "Entregado"
+    },
+    {
+      "id": "135d",
+      "containerID": 1000,
+      "cargo": "granel",
+      "origin": "barranq",
+      "destination": "cartag",
+      "status": "transito"
+    },
+    {
+      "id": "97e1",
+      "containerID": 111,
+      "cargo": "granel",
+      "origin": "barranq",
+      "destination": "trerr",
+      "status": "transito"
+    },
+    {
+      "id": "9e6e",
+      "containerID": 11,
+      "cargo": "granel",
+      "origin": "barranq",
+      "destination": "cartag",
+      "status": "transito"
+    }
+  ]
+}
